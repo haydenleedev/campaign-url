@@ -1,3 +1,5 @@
-## nThrive.com CSS & JS Workplace
+## Campaign URL Workplace
+
 ## How to generate production files:
-* npm run prod
+
+- npm run prod

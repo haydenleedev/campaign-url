@@ -92,7 +92,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: "[name]/_assets/css/nthrive_[name]_bundle.css",
+      filename: "[name]/_assets/css/ujet_[name]_bundle.css",
       //chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
