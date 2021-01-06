@@ -24,7 +24,8 @@ module.exports = {
   mode: "production",
   output: {
     path: BUILD_DIR,
-    filename: "[name]/_assets/js/[name].bundle.[chunkhash].js",
+    //filename: "[name]/_assets/js/[name].bundle.[chunkhash].js",
+    filename: "[name]/[name].bundle.[chunkhash].js",
     libraryTarget: "var",
     library: "Client", // All of our javascipt code is accessible through this Client library.
   },
@@ -92,7 +93,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: "[name]/_assets/css/ujet_[name]_bundle.css",
+      filename: "[name]/ujet_[name]_bundle.css",
       //chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
