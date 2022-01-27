@@ -32,7 +32,7 @@
   crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700|Roboto+Mono|Roboto+Slab" rel="stylesheet" type="text/css" />
 
-<link href="../url3/ujet_url3_bundle.css" rel="stylesheet"></head>
+<link href="./ujet_url3_bundle.css" rel="stylesheet"></head>
 <body class="loading UJET-menu-push">
  
 <div id="outer-wrap" class="outer-frame l-full-width-small" role="document">
@@ -54,6 +54,7 @@
 <div class="l-full-width">
 <article id="main-content" class="l-site-width splash-theme-padding">
   <h1 class="text-32px text-300 mb-30px l-align-center">UJET UTM Parameter Generator </h1> 
+  <a href="https://datastudio.google.com/embed/u/1/reporting/9f6b90d3-d5c8-4daa-a23e-0d15fd140ccc/page/uPyuB" target="_blank" class="text-underline text-060e97 block mb-10px">-&gt; Click here to view the archived campaign parameters &amp; URLs</a>
   <p>All of the entered input values are automatically recorded to the data as an archive. Please keep in mind that the recording occurs when you copy the url from the generated url field such as "facebook", "likedin", or "Campaign URL" field.</p>
 
   <section class="bg-f6f6f6 l-site-width" id="section1">
@@ -71,15 +72,29 @@
     </div>
 
     <div class="form-full l-clearfix">
-        <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Asset Purpose</span>
-        <input name="Asset-Purpose" type="text" id="Asset-Purpose" class="float-none mb-5px" />
-        <span class="small-text2 text-12px block ml-10px">( ex) CCC Buyers Guide - promo email,.. etc. Please enter a purpose of the asset. )</span>
+        <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Asset Name</span>
+        <input name="Asset-Name" type="text" id="Asset-Name" class="float-none mb-5px" />
+        <span class="small-text2 text-12px block ml-10px">( ex) CCC Buyers Guide,.. etc. Please enter an asset name. )</span>
     </div>
+
+    <!---
+    <div class="form-full l-clearfix">
+      <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Asset Purpose</span>
+      <input name="Asset-Purpose" type="text" id="Asset-Purpose2" class="float-none mb-5px" />
+      <span class="small-text2 text-12px block ml-10px">( ex) promo email,.. etc. Please enter a purpose of the asset. )</span>
+  </div>
+-->
 
     <div class="form-full l-clearfix">
 <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Campaign Name</span>
 <input name="utm_campaign" type="text" id="campaign_name2" class="lowercase underscore">
     </div>
+
+    <!--
+    <div class="form-full l-clearfix">
+      <input type="checkbox" id="check-value1" name="check-value1"></input><label for="vehicle1" class="block mb-20px text-14px"> Please check this checkbox if you need to have a different cls or clp values. If unchecked, Default values of <strong>cls=MKTG</strong> and <strong>clp=Email</strong> would be automaticaly added.</label> 
+    </div>
+    -->
   
   <div class="form-full l-clearfix bg-ffffff p-30px mb-60px">
     <p>* Use below urls for emails, social channels, paid google ad or paid linkedin ad.</p>
@@ -97,6 +112,8 @@
         </input>
         <input name="ca-request" id="ca-campaign-request" value="email">
         </input>
+        <input name="ca-log" id="ca-campaign-blog" value="blog">
+      </input>
         <input name="ca-sdrs" id="ca-campaign-sdrs" value="sdrs">
         </input>
         <input name="ca-facebook" id="ca-campaign-fa" value="facebook">
@@ -104,6 +121,8 @@
         <input name="ca-linkedin" id="ca-campaign-li" value="linkedin">
         </input>
         <input name="ca-twitter" id="ca-campaign-tw" value="twitter">
+        </input>
+        <input name="ca-instagram" id="ca-campaign-in" value="instagram">
         </input>
         <input name="ca-youtube" id="ca-campaign-yu" value="youtube">
         </input>
@@ -113,12 +132,16 @@
         </input>
         <input name="Current_Lead_Program" id="ca-clp2" value="Social_Media">
         </input>
+        <input name="Asset_Name" id="Asset_Name">
+        </input>
         <input name="Asset_Purpose" id="Asset_Purpose">
         </input>
 
         <input name="ca-google" id="ca-campaign-go-ad" value="google"></input>
         <input name="ca-linkedin" id="ca-campaign-li-ad" value="linkedin"></input>
+        <input name="ca-facebook" id="ca-campaign-fa-ad" value="facebook"></input>
         <input name="Current_Lead_Program" id="ca-clp-ad" value="Digital_Adv"></input>
+        <input name="Asset_Name" id="Asset_Name-ad"></input>
         <input name="Asset_Purpose" id="Asset_Purpose-ad"></input>
 
         <input name="Campaign_URL" id="ca-url">
@@ -141,6 +164,11 @@
     </div>
 
     <div class="social-wrap mb-20px l-clearfix">
+      <span class="mr-20px text-500">UJET Blog: </span>
+        <textarea name="Final_URL" id="blog-result-final" class="all-text" readonly> </textarea>
+  </div>
+
+    <div class="social-wrap mb-20px l-clearfix">
         <span class="mr-20px text-500">SDRs: </span>
           <textarea name="Final_URL" id="sdrs-result-final" class="all-text" readonly> </textarea>
     </div>
@@ -161,6 +189,11 @@
     </div>
 
     <div class="social-wrap mb-20px l-clearfix">
+      <span class="mr-20px text-500">Instagram: </span>
+      <textarea name="Final_URL" id="instagram-result-final" class="all-text" readonly> </textarea>
+  </div>
+
+    <div class="social-wrap mb-20px l-clearfix">
         <span class="mr-20px text-500">YouTube: </span>
         <textarea name="Final_URL" id="youtube-result-final" class="all-text" readonly> </textarea>
     </div>
@@ -172,9 +205,12 @@
     </div>
     <div class="social-wrap mb-20px l-clearfix">
     <span class="mr-20px text-500">Linkedin Paid Ad: </span>
-    
         <textarea name="Final_URL" id="linkedin-ad-result-final" class="all-text" readonly=""> </textarea>
     </div>
+    <div class="social-wrap mb-20px l-clearfix">
+      <span class="mr-20px text-500">Facebook Paid Ad: </span>
+          <textarea name="Final_URL" id="facebook-ad-result-final" class="all-text" readonly=""> </textarea>
+      </div>
 
     <div class="btn-wrap">
       <a href="#" class="btn inline-block" id="clear">Clear All Fields</a>
@@ -204,10 +240,16 @@
     </div>
 
     <div class="form-full l-clearfix">
-        <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Asset Purpose</span>
-        <input name="Asset_Purpose" type="text" id="Asset_Purpose2" class="float-none mb-5px" />
-        <span class="small-text2 text-12px block ml-10px">( ex) CCC Buyers Guide - promo email,.. etc. Please enter a purpose of the asset. )</span>
+        <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Asset Name</span>
+        <input name="Asset_Name" type="text" id="Asset_Name2" class="float-none mb-5px" />
+        <span class="small-text2 text-12px block ml-10px">( ex) CCC Buyers Guide,.. etc. Please enter an asset name. )</span>
     </div>
+
+    <div class="form-full l-clearfix">
+      <span class="label-lp inline-block text-16px ptb-10px l-clearfix">Asset Purpose</span>
+      <input name="Asset_Purpose" type="text" id="Asset_Purpose2" class="float-none mb-5px" />
+      <span class="small-text2 text-12px block ml-10px">( ex) Email,.. etc. Please enter a purpose of the asset. )</span>
+  </div>
 
     <div class="form-full l-clearfix">
         <span class="label-lp inline-block text-16px ptb-10px l-clearfix"
@@ -367,5 +409,5 @@
 
 
 
-<script type="text/javascript" src="../url3/url3.bundle.95d2224f8d48b949c2b2.js"></script></body>
+<script type="text/javascript" src="./url3.bundle.e7a9dd8fbce94f1a9b67.js"></script></body>
 </html>
